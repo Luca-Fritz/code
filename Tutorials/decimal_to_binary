@@ -1,0 +1,23 @@
+#This code Checks if the Current number is devidable with the binary system
+
+input_str = input ("Please enter a number you want to convert into binary (up to 1024): ")
+input = int(input_str)
+binary = [1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]
+result_list = []
+result = ""
+
+for number in binary:
+    if input / number  >= 1:
+        result_list.append(1)
+        input -= number
+        
+    else:
+        
+        result_list.append(0)
+
+for item in result_list:
+    result += str(item)
+
+print (input_str + " in binary is " + result)
+
+
