@@ -20,14 +20,10 @@ task_list = []
 for x in bin_list:
     if len(task_list) == user_int:
         break
-    else:#print (bin_list.count)
+    else:
         bin_int = bin_list[random.randint(0, 7)]
         task_list.append(bin_int)
-
-print (bin_int)     
-task_ss = "What is " + " + ".join(bin_int)     #kommt eingtlich in den For loop und seperiert gerade noch die Zahl falsch 64 zu 6 + 4 
         
-
-#print(sum(task_list))
-print(task_ss)
-print("Task List = " + str(task_list))
+task = "What is " + " + ".join(task_list)
+print (int(task_list))
+print(task)
