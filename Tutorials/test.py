@@ -1,6 +1,19 @@
 import random 
 import math
+import keyboard
+abc = True
 
+def run_func():
+  print('Hi, welcome!')
+  print('If you want to do this, press A or press B for doing that.')
+  while abc:
+    if keyboard.is_pressed('a'):
+      train_with_number()
+      abc = True
+
+    elif keyboard.is_pressed('b'):
+      train_random()
+      abc = Trues
 
 #if choice is to train with a specific number 
 #range 1x1 *30
@@ -20,9 +33,9 @@ def train_with_number():
         if user_answer == "exit":
             num_train = False
         elif user_answer == str(solution):
-            print("Thats right wanne try one more? (Exit to exit) \n")
+            print("Thats right wanne try one more?\n" + "<exit to exit>\n")
         else:
-            print("Thats wrong! It is " + str(solution) + "\n")
+            print("Thats wrong! It is " + str(solution) + "\n" + "<exit to exit>\n")
 
 
 #to train with random numbers
@@ -41,24 +54,16 @@ def train_random():
         if user_input == "exit":
             random_train = False
         elif user_input == str(solution):
-            print("Thats right wanne try one more? (Exit to exit) \n")
+            print("Thats right wanne try one more?\n" + "<exit to exit>\n")
         else:
-            print("Thats wrong! It is " + str(solution) + "\n")
+            print("Thats wrong! It is " + str(solution) + "\n" + "<exit to exit>\n")
 
-#Lists of 1x1
-running = True
-while running == True:
-    #Get the training type the user wants to do
-    user_choice = input("What do you wanna do? <random> / <number>: ").lower()
+print('To start press S')
+while abc:
+  if keyboard.is_pressed('S'): 
+    run_func()
+  abc = True
 
-    if user_choice == "number":
-        train_with_number()
-    elif user_choice == "random":
-        train_random()
-    elif user_choice == "exit":
-        running = False
-    else:
-        print("Please enter a vaild promt")
 
 
 

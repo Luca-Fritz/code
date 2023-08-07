@@ -1,7 +1,3 @@
-#test file
-list = [1, 2, 3]
+import colorama as c
 
-var = ""
-
-for element in list:
-    var += str(element)
+print(c.Fore.RED + "Color Statement")
