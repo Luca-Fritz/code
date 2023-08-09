@@ -26,5 +26,5 @@ def panel_wattage_generation():
     wattage_per_day = panel_wattage_list[user_input] * 5 * 0.85
     print("The " + str(panel_wattage_list[user_input]) + "W panel generates " + str(wattage_per_day) + "Wh per day")
     panel_wattage_generation()
-
+#executes
 panel_wattage_generation()
