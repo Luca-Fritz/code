@@ -1,26 +1,13 @@
-list = [-2.3475, 1.5275, 5.3325, -1,4575]
-
-def test():
-    for item in list:
-        counter = 1
-        new_item = (item)*(item)
-        counter += 1
-        print (str(counter) + ". " + str(item))
-    return item
-
-print(test())
+dna = "AAAT"
 
 
+def DNA_strand(dna):
+    for letter in dna:
+        if letter == "A":
+            dna = letter.replace("A", "T")
+        elif letter == "T":
+            dna = letter.replace("T", "A")
 
+    return dna
 
-#mean = 118.6275
-
-#avg_point = round((list[0] - mean), 4)
-#avg_test = (avg_point)*(avg_point)
-
-#print (avg_point)
-#print (avg_test)
-
-number = -1
-
-#print ((avg_point)*)
+print(DNA_strand(dna))
